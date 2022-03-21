@@ -20,13 +20,15 @@ import lombok.Data;
 @ViewScoped
 @Data
 public class IndexController implements Serializable {
-
     /**
      * Creates a new instance of IndexController
      */
-   
-      private List<String> list;
+    // <editor-fold defaultstate="collapsed" desc="fields">
+     private List<String> list;
     private String name;
+    private String text="Welcome";
+// </editor-fold>
+     
 
      public IndexController() {
     }
