@@ -16,25 +16,27 @@
             <div class="sb-sidenav-menu">
                 <div class="nav">
                     <div class="sb-sidenav-menu-heading">Core</div>
-                    <a class="nav-link" href="index.xhtml">
+               
+                    <p:commandLink class="nav-link"  value="Dashboard"  
+                                   action="#{navigatorController.go('index.xhtml')}">
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                        Dashboard
-                    </a>
+                    </p:commandLink>
+                
+                  
                     <p:commandLink class="nav-link"  value="Forms"  
-                                       action="#{navigatorController.go('form.xhtml')}">
-                           <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                        </p:commandLink>
-                    <p:commandLink class="nav-link"  value="Forms aoutc"  
-                                   action="form" >
-                           <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                        </p:commandLink>
-                    
-                    <a class="nav-link" href="faces/form.xhtml">
+                                   action="#{navigatorController.go('form.xhtml')}">
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                        Forms
-                    </a>
+                    </p:commandLink>
+                
+
+                      <p:commandLink class="nav-link"  value="Newjsf"  
+                                   action="#{navigatorController.go('newjsf.xhtml')}">
+                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    </p:commandLink>
+                
+                
                     <div class="sb-sidenav-menu-heading">Prime</div>
-                   
+
                     <div class="sb-sidenav-menu-heading">Interface</div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                         <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
