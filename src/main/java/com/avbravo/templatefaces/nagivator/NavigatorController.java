@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSF/JSFManagedBean.java to edit this template
  */
-package com.avbravo.templatefaces.controller;
+package com.avbravo.templatefaces.nagivator;
 
 import com.avbravo.jmoordbutils.JsfUtil;
 import jakarta.faces.view.ViewScoped;
