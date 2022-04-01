@@ -24,16 +24,28 @@
         <welcome-file>faces/index.xhtml</welcome-file>
     </welcome-file-list>-->
   
-       <context-param>
+<!--       <context-param>
         <param-name>jakarta.faces.FACELETS_VIEW_MAPPINGS</param-name>
         <param-value>*.xhtml;*.view.xml;*.jspx</param-value>
     </context-param>
     <context-param>
         <param-name>jakarta.faces.DEFAULT_SUFFIX</param-name>
         <param-value>.xhtml .view.xml .jsp .jspx</param-value>
-    </context-param>
+    </context-param>-->
     
     
+    
+    <!--
+    captcha
+    -->
+    <context-param>
+    <param-name>primefaces.PRIVATE_CAPTCHA_KEY</param-name>
+    <param-value>6LfOlzcfAAAAABeEMUNT0ggwzYx5nP-pCw8ZpCR6</param-value>
+</context-param>
+<context-param>
+    <param-name>primefaces.PUBLIC_CAPTCHA_KEY</param-name>
+    <param-value>6LfOlzcfAAAAAKfQn12nYAU7KifVDPAOB_OWkGC6</param-value>
+</context-param>
     
     <!-- web fonts -->
 <mime-mapping>
@@ -64,4 +76,6 @@
     <extension>ico</extension>
     <mime-type>image/x-icon</mime-type>
 </mime-mapping>
+
+
 </web-app>
