@@ -1,10 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSF/JSFManagedBean.java to edit this template
- */
+
 package com.avbravo.templatefaces.security;
-// <editor-fold defaultstate="collapsed" desc="import">ç
+
+import com.avbravo.jmoordbutils.DateUtil;
 import com.avbravo.jmoordbutils.JsfUtil;
+import com.avbravo.jmoordbutils.paginator.Paginator;
+import jakarta.annotation.PostConstruct;
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.context.SessionScoped;
 import jakarta.faces.context.ExternalContext;
 import jakarta.faces.context.FacesContext;
@@ -12,10 +13,18 @@ import jakarta.inject.Inject;
 import jakarta.inject.Named;
 import jakarta.servlet.http.HttpSession;
 import java.io.Serializable;
+import java.util.List;
+import java.util.Map;
 import lombok.Data;
 import org.eclipse.microprofile.config.Config;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
-// </editor-fold>
+import org.primefaces.PrimeFaces;
+import org.primefaces.model.FilterMeta;
+import org.primefaces.model.LazyDataModel;
+import org.primefaces.model.SortMeta;
+//import org.eclipse.microprofile.config.Config;
+//import org.eclipse.microprofile.config.inject.ConfigProperty;
+
 
 /**
  *
@@ -32,12 +41,8 @@ private String profile;
 
 
 // <editor-fold defaultstate="collapsed" desc="Microprofile Config">
-   @Inject
-    private Config config;
-   
-     @Inject
-    @ConfigProperty(name="applicativePath")
-    private String applicativePath;
+//   @Inject
+//   ConfigProducer configProducer;
    
  // </editor-fold>
         
@@ -45,13 +50,27 @@ private String profile;
      * Creates a new instance of AccessSecurity
      */
     public AccessController() {
-     
+        System.out.println("---->constructor ");
     }
-    
+      // <editor-fold defaultstate="collapsed" desc="init">
+    @PostConstruct
+    public void init() {
+        try {
+            System.out.println("---> init...");
+            // Usuario logeado
+          
+        } catch (Exception e) {
+            
+            System.out.println(JsfUtil.nameOfClass()  + " "+JsfUtil.nameOfMethod());
+        }
+    }
+
+    // </editor-fold>
     
         // <editor-fold defaultstate="collapsed" desc="String logout()">
     public String logout() {
-        return logout(applicativePath+ "/faces/login.xhtml?faces-redirect=true");
+//        return logout(applicativePath+ "/faces/login.xhtml?faces-redirect=true");
+return "";
     }
     // </editor-fold>
     
